@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  #MySQL连接
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wechat?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 123456
+
+#    sqlserver连接
+#  datasource:
+#    username: sa
+#    password: 123456
+#    url: jdbc:sqlserver://localhost:1433;DatabaseName=test7.16
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#mybatis的相关配置
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.springboot.entity
+
+#  #开启驼峰命名
+#  configuration:
+#    map-underscore-to-camel-case: true
+
+#显示sql语句
+logging:
+  level:
+    com:
+      example:
+        springboot:
+          mapper: debug
