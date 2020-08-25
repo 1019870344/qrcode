@@ -15,6 +15,12 @@ spring:
 #    password: 123456
 #    url: jdbc:sqlserver://localhost:1433;DatabaseName=test7.16
 #    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
 #mybatis的相关配置
 mybatis:
   #mapper配置文件

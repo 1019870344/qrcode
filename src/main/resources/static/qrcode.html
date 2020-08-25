@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二维码测试</title>
+</head>
+<body>
+<div>
+    扫码登陆
+</div>
+<button id="btn" onclick="doCode()">点击</button>
+<div id="aaa">
+    <div id="qrcode" style="display: none">
+        <img src="" id="npcImg" width="300" height="300"/>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+<script>
+    function doCode() {
+        $("#qrcode").css("display","block");
+        $('#npcImg').removeAttr('src');
+        var str = Math.floor((Math.random() * 10000) + 1);
+        var img = document.getElementById("npcImg");
+        img.src = '/getqrcode?content=' + str;
+        console.log(str);
+    }
+
+</script>
+</body>
+</html>
